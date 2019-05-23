@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Split from './composition/Split';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Split className="left">
+        This is the content for the left split. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ut autem perferendis nam saepe repellendus ipsa consectetur vero quo? Animi placeat excepturi modi exercitationem aliquid tenetur eius necessitatibus voluptatum ipsa.
+      </Split>
+      <Split className="right">
+        This is the content for the right split. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti minus officiis atque voluptatem itaque, aut dolores impedit odio aperiam, obcaecati aspernatur non, odit suscipit. Laborum harum ex similique repudiandae quae?
+      </Split>
+    </main>
   );
 }
 
