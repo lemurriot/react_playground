@@ -4,25 +4,38 @@ import React from 'react'
 class Bomb extends React.Component {
     state = {
         message: 'tick',
-        timer: 8
+        timer: 0
     }
 
     componentDidMount(){ 
         this.interval = setInterval(() => {
-            this.changeMessageAndCounter();
+            this.changeCounter();
         }, 1000);
     }
 
-    changeMessageAndCounter(){
-        const { timer, message } = this.state;
-        let breakLoop = false;
-        this.setState({timer: --this.state.timer});
-        if (timer === 0){
-            this.setState({message: 'BOOM!'});
-            clearInterval(this.interval);
-        } else {
-            message === 'tick' ? this.setState({message: 'tock'}) : this.setState({message: 'tick'})
-        }
+    changeCounter(){
+        const newTime = ++this.state.timer
+        this.setState({timer: newTime});
+        this.changeMessage()
+    }
+    
+    changeMessage(){
+        const { timer } = this.state;
+   
+            if (timer > 7){
+                this.setState({message: 'BOOM!'})
+                clearInterval(this.interval)
+            } else if (timer % 2 === 0){
+                this.setState({message: 'tick'})
+            } else {
+                this.setState({message: 'tock'})
+            }
+
+      
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval)
     }
 
     render(){
