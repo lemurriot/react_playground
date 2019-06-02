@@ -22,7 +22,7 @@ const secondTooltip = (
 class App extends React.Component {
   state = {
     stepInput: 1,
-    step: 1
+    step: 1,
   }
 
   handleInput = e => {
@@ -40,7 +40,17 @@ class App extends React.Component {
     })
     console.log(this.state.step)
   }
+
+  
   render(){
+    const tabsProp = [
+      { name: 'First tab',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
+      { name: 'Second tab',
+        content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+      { name: 'Third tab',
+        content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
+    ];
     return (
         <main className='App'>
           <Messages name="Messages" unread={0}/>
@@ -61,7 +71,7 @@ class App extends React.Component {
             <button onClick={() => this.handleStepSubmission()}>Submit</button>
             <Counter step={this.state.step} />
           </div>
-          <Tabs />
+          <Tabs tabs={tabsProp} />
         </main>
       )
     }

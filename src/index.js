@@ -5,6 +5,7 @@ import App from './App';
 // import HelloWorld from './state-drills/HelloWorld';
 // import Bomb from './state-drills/Bomb';
 // import RouletteGunContainer from './state-drills/RouletteGunContainer';
+import BooleanSwitch from './state-drills/BooleanSwitch';
 // import Tabs from './state/Tabs';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<BooleanSwitch />, document.getElementById('root'));
