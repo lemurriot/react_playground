@@ -5,6 +5,7 @@ import Tooltip from './composition/Tooltip';
 import Messages from './Messages';
 import TheDate from './state/TheDate';
 import Counter from './state/Counter';
+import Tabs from './state/Tabs';
 
 // make 2 tooltips here and another inside the App directly
 const firstTooltip = (
@@ -60,6 +61,7 @@ class App extends React.Component {
             <button onClick={() => this.handleStepSubmission()}>Submit</button>
             <Counter step={this.state.step} />
           </div>
+          <Tabs />
         </main>
       )
     }

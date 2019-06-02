@@ -11,8 +11,7 @@ class TheDate extends React.Component {
     componentDidMount(){
         return this.interval = setInterval(() => {
             this.setState({datetime: new Date()})
-        }
-        ), 1000;
+        }, 1000);
     }
 
     componentWillUnmount(){
