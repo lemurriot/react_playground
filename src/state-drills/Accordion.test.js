@@ -22,7 +22,7 @@ describe('Accordion component', () => {
     })
 
     it('renders empty given no selection', () => {
-        const wrapper = shallow(<Accordion sections={accordionProps}/>)
+        const wrapper = shallow(<Accordion />)
         expect(toJson(wrapper)).toMatchSnapshot()
     })
 

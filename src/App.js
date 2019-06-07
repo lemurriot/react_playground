@@ -52,6 +52,7 @@ class App extends React.Component {
       { name: 'Third tab',
         content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
     ];
+
     return (
         <main className='App'>
           <Messages name="Messages" unread={0}/>

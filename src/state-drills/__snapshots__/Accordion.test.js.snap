@@ -118,62 +118,6 @@ exports[`Accordion component renders empty given no selection 1`] = `
   <h2>
     Accordion
   </h2>
-  <ul>
-    <li
-      key="0"
-    >
-      <button
-        id="0"
-        onClick={[Function]}
-      >
-        First tab
-      </button>
-      <p
-        className="hide-content"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.
-      </p>
-    </li>
-    <li
-      key="1"
-    >
-      <button
-        id="1"
-        onClick={[Function]}
-      >
-        Second tab
-      </button>
-      <p
-        className="hide-content"
-      >
-        Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-    </li>
-    <li
-      key="2"
-    >
-      <button
-        id="2"
-        onClick={[Function]}
-      >
-        Third tab
-      </button>
-      <p
-        className="hide-content"
-      >
-        Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.
-      </p>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Accordion component renders empty given no tabs 1`] = `
-<div>
-  <hr />
-  <h2>
-    Accordion
-  </h2>
   <ul />
 </div>
 `;

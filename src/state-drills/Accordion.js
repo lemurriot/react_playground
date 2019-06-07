@@ -4,7 +4,7 @@ import './Accordion.css'
 
 class Accordion extends React.Component {
     state = {
-        isShown: -1
+        isShown: null
     }
 
 
@@ -12,7 +12,7 @@ class Accordion extends React.Component {
     handleClick = i => {
         this.state.isShown === i ? 
         this.setState({
-            isShown: -1
+            isShown: null
         }) :
         this.setState({
             isShown: i
@@ -26,7 +26,7 @@ class Accordion extends React.Component {
                 <hr/>
                 <h2>Accordion</h2>
                 <ul>
-                    {liList}
+                    {!!this.props.sections.length && liList}
                 </ul>
             </div>
         );
