@@ -6,6 +6,7 @@ import Messages from './Messages';
 import TheDate from './state/TheDate';
 import Counter from './state/Counter';
 import Tabs from './state/Tabs';
+import Accordion from './state-drills/Accordion';
 
 // make 2 tooltips here and another inside the App directly
 const firstTooltip = (
@@ -72,6 +73,7 @@ class App extends React.Component {
             <Counter step={this.state.step} />
           </div>
           <Tabs tabs={tabsProp} />
+          <Accordion sections={tabsProp} />
         </main>
       )
     }

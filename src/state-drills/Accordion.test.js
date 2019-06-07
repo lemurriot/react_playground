@@ -1,12 +1,12 @@
 import React from 'react'
-import Tabs from './Tabs'
 import ReactDOM from 'react-dom'
-import { shallow }from 'enzyme'
+import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
+import Accordion from './Accordion'
 
-describe('Tabs component', () => {
+describe('Accordion component', () => {
 
-    const tabsProp = [
+    const accordionProps = [
         { name: 'First tab',
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
         { name: 'Second tab',
@@ -15,37 +15,28 @@ describe('Tabs component', () => {
           content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
       ];
 
-      it('renders without crashing', () => {
+    it('renders without crashing', () => {
         const div = document.createElement('div')
-        ReactDOM.render(<Tabs />, div)
+        ReactDOM.render(<Accordion />, div)
         ReactDOM.unmountComponentAtNode(div)
-        
     })
-    
-    it('renders empty given no tabs', () => {
-        const wrapper = shallow(<Tabs />)
-        // The wrapper allows us to find nodes within this component's tree, it also allows us to simulate events on nodes.
-        toJson(wrapper)
+
+    it('renders empty given no selection', () => {
+        const wrapper = shallow(<Accordion sections={accordionProps}/>)
         expect(toJson(wrapper)).toMatchSnapshot()
     })
 
-    it('renders the first tab by default', () => {
-      const wrapper = shallow(<Tabs tabs={tabsProp} />)
-      expect(toJson(wrapper)).toMatchSnapshot()
-  })
-
     it('closes the first tab and opens any clicked tab', () => {
-      const wrapper = shallow(<Tabs tabs={tabsProp} />)
+      const wrapper = shallow(<Accordion sections={accordionProps} />)
       wrapper.find('button')
-      // console.log('>>> WRAPPER <<<')
-      // console.log(wrapper.debug())
-      // console.log('>>> FIND(BUTTON) <<<')
-      // console.log(wrapper.find('button').debug())
       wrapper.find('button').at(1).simulate('click')
       expect(toJson(wrapper)).toMatchSnapshot()
     })
+
+    it('has no tabs open when the current open tab has its button clicked', () => {
+      const wrapper = shallow(<Accordion sections={accordionProps} />)
+      wrapper.find('button')
+      wrapper.find('button').at(0).simulate('click')
+      expect(toJson(wrapper)).toMatchSnapshot()
+    })
 })
-
-
-
-
