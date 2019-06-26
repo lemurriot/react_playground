@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DemonymApp /> Component renders on load 1`] = `
+<div
+  className="demonym_app"
+>
+  <CountrySelector
+    countries={
+      Array [
+        Object {
+          "name": "Barbados",
+        },
+        Object {
+          "name": "Bahrain",
+        },
+      ]
+    }
+  />
+  <Demonym
+    country="Barbados"
+    name="Barbadian"
+  />
+</div>
+`;

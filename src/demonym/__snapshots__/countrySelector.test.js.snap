@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CountrySelector /> component renders upon load 1`] = `
+<div
+  className="country_selector"
+>
+  <form>
+    <label
+      htmlFor="country"
+    >
+      Select a country:
+    </label>
+    <select
+      id="country"
+      name="country"
+    >
+      <option
+        value="None"
+      >
+        Select one...
+      </option>
+    </select>
+  </form>
+</div>
+`;

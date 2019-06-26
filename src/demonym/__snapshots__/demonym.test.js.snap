@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Demonym /> Component renders complete form 1`] = `
+<div
+  className="demonym"
+>
+  A 
+   comes from 
+</div>
+`;
